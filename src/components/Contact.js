@@ -35,10 +35,10 @@ const Contact = () => {
                         </div>
                         <div className="contact-hello">
                             <p>Say Hello</p>
-                            <Link className='hello-links' to="//wa.me/+2348060860565" target='_blank'>wa.me/shreejith</Link>
+                            <Link className='hello-links' to="" target='_blank'></Link>
                             <a className='hello-links' href="mailto:shreejithshreejith45@gmail.com" target='_blank' rel="noreferrer">shreejithshreejith45@gmail.com</a>
                             <a className='hello-links' href="mailto:https://github.com/kshreejith" target='_blank' rel="noreferrer">https://github.com/kshreejith</a>
-                            <a className='hello-links' href="mailto:https://www.linkedin.com/in/shreejith-k-90a586269/" target='_blank' rel="noreferrer">https://www.linkedin.com/in/shreejith-k-90a586269/</a>
+                            <a className='hello-links' href="mailto:https://www.linkedin.com/in/kshreejith/" target='_blank' rel="noreferrer">https://www.linkedin.com/in/kshreejith//</a>
                         </div>
                     </motion.div>
                     <motion.div className="right-box" initial={{opacity: 0, y: '50px'}} whileInView={verticalLeft}>
