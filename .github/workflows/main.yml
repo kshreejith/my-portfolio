@@ -8,19 +8,18 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Run npm
+      - name: Install npm dependencies
         run: npm install
 
-      - name: Run npm build
+      - name: Build the React app
         run: npm run build
 
-      - name: Upload to s3
+      - name: Upload to S3
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
+          source_dir: build/
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        with:
-          source_dir: build/
